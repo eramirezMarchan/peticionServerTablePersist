@@ -14,10 +14,11 @@
 		6035EF8F1D01D0210057509D /* TVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6035EF8E1D01D0210057509D /* TVC.swift */; };
 		6035EF911D01FEB60057509D /* ControlLibro.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6035EF901D01FEB60057509D /* ControlLibro.swift */; };
 		6035EFDF1D037DA70057509D /* InfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6035EFDE1D037DA70057509D /* InfoVC.swift */; };
+		6078D1691D17198E00FC07E5 /* PeticionServerTablaPersist.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 6078D1671D17198E00FC07E5 /* PeticionServerTablaPersist.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		6035EF791D01CE680057509D /* PeticionServerTabla.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PeticionServerTabla.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6035EF791D01CE680057509D /* PeticionServerTablaPersist.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PeticionServerTablaPersist.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6035EF7C1D01CE680057509D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6035EF811D01CE680057509D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		6035EF831D01CE680057509D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -26,6 +27,7 @@
 		6035EF8E1D01D0210057509D /* TVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TVC.swift; sourceTree = "<group>"; };
 		6035EF901D01FEB60057509D /* ControlLibro.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ControlLibro.swift; sourceTree = "<group>"; };
 		6035EFDE1D037DA70057509D /* InfoVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoVC.swift; sourceTree = "<group>"; };
+		6078D1681D17198E00FC07E5 /* PeticionServerTablaPersist.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PeticionServerTablaPersist.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,7 +52,7 @@
 		6035EF7A1D01CE680057509D /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				6035EF791D01CE680057509D /* PeticionServerTabla.app */,
+				6035EF791D01CE680057509D /* PeticionServerTablaPersist.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -59,6 +61,7 @@
 			isa = PBXGroup;
 			children = (
 				6035EF7C1D01CE680057509D /* AppDelegate.swift */,
+				6078D1671D17198E00FC07E5 /* PeticionServerTablaPersist.xcdatamodeld */,
 				6035EF801D01CE680057509D /* Main.storyboard */,
 				6035EF831D01CE680057509D /* Assets.xcassets */,
 				6035EF851D01CE680057509D /* LaunchScreen.storyboard */,
@@ -74,9 +77,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		6035EF781D01CE680057509D /* PeticionServerTabla */ = {
+		6035EF781D01CE680057509D /* PeticionServerTablaPersist */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 6035EF8B1D01CE680057509D /* Build configuration list for PBXNativeTarget "PeticionServerTabla" */;
+			buildConfigurationList = 6035EF8B1D01CE680057509D /* Build configuration list for PBXNativeTarget "PeticionServerTablaPersist" */;
 			buildPhases = (
 				6035EF751D01CE680057509D /* Sources */,
 				6035EF761D01CE680057509D /* Frameworks */,
@@ -86,9 +89,9 @@
 			);
 			dependencies = (
 			);
-			name = PeticionServerTabla;
+			name = PeticionServerTablaPersist;
 			productName = climaTabla;
-			productReference = 6035EF791D01CE680057509D /* PeticionServerTabla.app */;
+			productReference = 6035EF791D01CE680057509D /* PeticionServerTablaPersist.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -106,7 +109,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 6035EF741D01CE680057509D /* Build configuration list for PBXProject "PeticionServerTabla" */;
+			buildConfigurationList = 6035EF741D01CE680057509D /* Build configuration list for PBXProject "PeticionServerTablaPersist" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -119,7 +122,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				6035EF781D01CE680057509D /* PeticionServerTabla */,
+				6035EF781D01CE680057509D /* PeticionServerTablaPersist */,
 			);
 		};
 /* End PBXProject section */
@@ -143,6 +146,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6035EFDF1D037DA70057509D /* InfoVC.swift in Sources */,
+				6078D1691D17198E00FC07E5 /* PeticionServerTablaPersist.xcdatamodeld in Sources */,
 				6035EF7D1D01CE680057509D /* AppDelegate.swift in Sources */,
 				6035EF8F1D01D0210057509D /* TVC.swift in Sources */,
 				6035EF911D01FEB60057509D /* ControlLibro.swift in Sources */,
@@ -262,8 +266,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = climaTabla/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.ERM.PeticionServerTabla;
-				PRODUCT_NAME = PeticionServerTabla;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ERM.PeticionServerTablaPersist;
+				PRODUCT_NAME = PeticionServerTablaPersist;
 			};
 			name = Debug;
 		};
@@ -273,15 +277,15 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = climaTabla/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.ERM.PeticionServerTabla;
-				PRODUCT_NAME = PeticionServerTabla;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ERM.PeticionServerTablaPersist;
+				PRODUCT_NAME = PeticionServerTablaPersist;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		6035EF741D01CE680057509D /* Build configuration list for PBXProject "PeticionServerTabla" */ = {
+		6035EF741D01CE680057509D /* Build configuration list for PBXProject "PeticionServerTablaPersist" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				6035EF891D01CE680057509D /* Debug */,
@@ -290,7 +294,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		6035EF8B1D01CE680057509D /* Build configuration list for PBXNativeTarget "PeticionServerTabla" */ = {
+		6035EF8B1D01CE680057509D /* Build configuration list for PBXNativeTarget "PeticionServerTablaPersist" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				6035EF8C1D01CE680057509D /* Debug */,
@@ -300,6 +304,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		6078D1671D17198E00FC07E5 /* PeticionServerTablaPersist.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				6078D1681D17198E00FC07E5 /* PeticionServerTablaPersist.xcdatamodel */,
+			);
+			currentVersion = 6078D1681D17198E00FC07E5 /* PeticionServerTablaPersist.xcdatamodel */;
+			path = PeticionServerTablaPersist.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 6035EF711D01CE680057509D /* Project object */;
 }

@@ -7,17 +7,24 @@
 //
 
 import UIKit
+import CoreData
 
 class ControlLibro: UIViewController,UITextFieldDelegate {
-    
+        
     @IBOutlet weak var img_portada: UIImageView!
     @IBOutlet weak var lbl_autor: UILabel!
     @IBOutlet weak var lbl_titulo: UILabel!
     @IBOutlet weak var txt_search: UITextField!
+    
+    var contexto  : NSManagedObjectContext? = nil
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
         txt_search.delegate = self
+        
+        self.contexto = (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext
+
     }
 
     override func didReceiveMemoryWarning() {
@@ -29,6 +36,32 @@ class ControlLibro: UIViewController,UITextFieldDelegate {
     {
         textField.resignFirstResponder()
         if(self.txt_search.text != ""){
+            
+            let seccionEntidad = NSEntityDescription.entityForName("Libros", inManagedObjectContext: self.contexto!)
+            let peticion = seccionEntidad?.managedObjectModel.fetchRequestFromTemplateWithName("petLibro", substitutionVariables: ["isbn":self.txt_search.text!])
+            
+            do {
+                
+                let seccionEntidad2 = try self.contexto?.executeFetchRequest(peticion!)
+                if (seccionEntidad2?.count > 0) {
+                    self.txt_search.text = nil
+                    let titulo = seccionEntidad2![0].valueForKey("titulo") as! String
+                    let autores = seccionEntidad2![0].valueForKey("autor") as! String
+                    let isbn = seccionEntidad2![0].valueForKey("isbn") as! String
+                    let portada = UIImage(data:seccionEntidad2![0].valueForKey("portada") as! NSData)
+                    self.lbl_titulo.text = titulo
+                    self.lbl_autor.text = autores
+                    self.img_portada.image = portada
+                    self.txt_search.text = isbn
+                    
+                    
+                    return false
+                }
+            }
+            catch{
+                
+            }
+
             
             let urls = "https://openlibrary.org/api/books?jscmd=data&format=json&bibkeys=ISBN:"
             let urlSearch = urls + txt_search.text!
@@ -77,6 +110,13 @@ class ControlLibro: UIViewController,UITextFieldDelegate {
                         if(titulo != "NO ENCONTRADO"){
                             let libro = Seccion(titulo: titulo, autores: autores,portada: self.img_portada.image!,isbn: self.txt_search.text!)
                             libros.append(libro)
+                            
+                            let nuevaSeccionEntidad = NSEntityDescription.insertNewObjectForEntityForName("Libros", inManagedObjectContext: self.contexto!)
+                            nuevaSeccionEntidad.setValue(self.txt_search.text!, forKey: "isbn")
+                            nuevaSeccionEntidad.setValue(titulo, forKey: "titulo")
+                            nuevaSeccionEntidad.setValue(autores.joinWithSeparator(","), forKey: "autor")
+                            nuevaSeccionEntidad.setValue(UIImagePNGRepresentation(self.img_portada.image!), forKey: "portada")
+
                         }
                         
                         
@@ -101,7 +141,15 @@ class ControlLibro: UIViewController,UITextFieldDelegate {
         
     }
 
-    
+    override func viewWillDisappear(animated: Bool) {
+        
+        do {
+            try self.contexto?.save()
+        }
+        catch {
+            
+        }
+    }
 
     /*
     // MARK: - Navigation

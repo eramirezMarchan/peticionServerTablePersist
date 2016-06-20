@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 struct Seccion {
     var titulo:String
@@ -25,7 +26,7 @@ struct Seccion {
 var libros = [Seccion]()
 
 class TVC: UITableViewController {
-    
+    var contexto  : NSManagedObjectContext? = nil
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.dataSource = self
@@ -34,6 +35,23 @@ class TVC: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        self.contexto = (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext
+
+        let seccionEntidad = NSEntityDescription.entityForName("Libros", inManagedObjectContext: self.contexto!)
+        let peticion = seccionEntidad?.managedObjectModel.fetchRequestTemplateForName("petLibros")
+        do {
+            let seccionesEntidad = try self.contexto?.executeFetchRequest(peticion!)
+            for seccionEntidad2 in seccionesEntidad! {
+                let titulo = seccionEntidad2.valueForKey("titulo") as! String
+                let autores = seccionEntidad2.valueForKey("autor") as! String
+                let isbn = seccionEntidad2.valueForKey("isbn") as! String
+                let portada = UIImage(data:seccionEntidad2.valueForKey("portada") as! NSData)
+                libros.append(Seccion(titulo: titulo,autores:autores.componentsSeparatedByString(","), portada:portada!,isbn:isbn))
+            }
+        }
+        catch{
+            
+        }
     }
 
     override func didReceiveMemoryWarning() {

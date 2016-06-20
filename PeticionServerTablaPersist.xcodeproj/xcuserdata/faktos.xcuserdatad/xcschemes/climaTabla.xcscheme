@@ -16,8 +16,8 @@
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "6035EF781D01CE680057509D"
                BuildableName = "PeticionServerTabla.app"
-               BlueprintName = "PeticionServerTabla"
-               ReferencedContainer = "container:PeticionServerTabla.xcodeproj">
+               BlueprintName = "PeticionServerTablaPersist"
+               ReferencedContainer = "container:PeticionServerTablaPersist.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -34,8 +34,8 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "6035EF781D01CE680057509D"
             BuildableName = "PeticionServerTabla.app"
-            BlueprintName = "PeticionServerTabla"
-            ReferencedContainer = "container:PeticionServerTabla.xcodeproj">
+            BlueprintName = "PeticionServerTablaPersist"
+            ReferencedContainer = "container:PeticionServerTablaPersist.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -57,8 +57,8 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "6035EF781D01CE680057509D"
             BuildableName = "PeticionServerTabla.app"
-            BlueprintName = "PeticionServerTabla"
-            ReferencedContainer = "container:PeticionServerTabla.xcodeproj">
+            BlueprintName = "PeticionServerTablaPersist"
+            ReferencedContainer = "container:PeticionServerTablaPersist.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -76,8 +76,8 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "6035EF781D01CE680057509D"
             BuildableName = "PeticionServerTabla.app"
-            BlueprintName = "PeticionServerTabla"
-            ReferencedContainer = "container:PeticionServerTabla.xcodeproj">
+            BlueprintName = "PeticionServerTablaPersist"
+            ReferencedContainer = "container:PeticionServerTablaPersist.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
